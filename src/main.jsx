@@ -30,11 +30,11 @@ const projects = [
     title: "LinguaPay",
     period: "Mar 2025 — Jun 2025",
     description:
-      "A multilingual language and currency platform combining translation, speech, currency conversion, and weekly exchange-rate analysis.",
+      "A multilingual web platform for translation, speech assistance, currency conversion, and historical exchange-rate analysis.",
     highlights: [
-      "Supported 103 languages and 31 currencies.",
-      "Integrated the Frankfurter API for currency conversion and 7-day historical exchange-rate analysis.",
-      "Built 4 Flask REST endpoints with request validation, failure handling, structured JSON responses, and appropriate HTTP status codes.",
+      "Built a React frontend supporting translation across 103 languages and currency conversion across 31 currencies.",
+      "Integrated the Frankfurter API to retrieve exchange rates and analyze 7-day historical currency trends.",
+      "Developed 4 Flask REST endpoints with input validation, exception handling, structured JSON responses, and appropriate HTTP status codes.",
     ],
     stack: ["React", "Flask", "REST APIs"],
     github: "https://github.com/navya-thottempudi/Linguapay",
@@ -45,10 +45,10 @@ const projects = [
     title: "AI Assistant Web Application",
     period: "Apr 2026",
     description:
-      "A full-stack conversational AI application using an LLM-backed backend service with persistent chat history.",
+      "A full-stack conversational AI application with an LLM-powered backend and persistent chat history.",
     highlights: [
-      "Engineered a React and Node.js/Express application integrating Groq's Llama 3.1 8B model for interactive question answering.",
-      "Implemented MongoDB Atlas-backed chat persistence, storing user and AI exchanges and retrieving the 20 most recent exchanges through REST.",
+      "Built a React frontend and Node.js/Express backend integrating Groq's Llama 3.1 8B model for interactive question answering.",
+      "Implemented MongoDB Atlas-backed chat persistence and REST endpoints to store conversations and retrieve the 20 most recent exchanges.",
       "Added request validation, exception handling, and environment-based management of API and database credentials.",
     ],
     stack: [
@@ -66,11 +66,11 @@ const projects = [
     title: "SkillPath AI",
     period: "Jul 2026",
     description:
-      "An AI-powered learning roadmap generator that creates personalized plans from career goals, skill level, study hours, and resource preferences.",
+      "An AI-powered learning roadmap generator that creates personalized career plans based on user goals, skill level, study hours, and resource preferences.",
     highlights: [
-      "Built personalized learning plans using Google's Gemini 2.5 Flash model.",
-      "Engineered structured JSON outputs containing learning phases, durations, skills, projects, resources, and career outcomes.",
-      "Added localStorage-based persistence to preserve the latest roadmap and maintain generated roadmap history.",
+      "Built an interactive roadmap generator using Node.js/Express and Google's Gemini 2.5 Flash API.",
+      "Designed structured JSON outputs for learning phases, durations, skills, projects, resources, and career outcomes.",
+      "Implemented localStorage-based persistence to retain generated roadmaps and the latest user preferences.",
     ],
     stack: [
       "HTML",
@@ -326,8 +326,8 @@ function App() {
               </div>
 
               <div>
-                <strong>1,500+</strong>
-                <span>DSA rating</span>
+                <strong>1,750+</strong>
+                <span>Problems Solved</span>
               </div>
 
               <div>
@@ -362,113 +362,107 @@ function App() {
           ================================================= */}
 
           <section
-            id="about"
-            className="section container"
-          >
+  id="about"
+  className="section container"
+>
+  <div className="section-heading">
+    <span className="section-number">
+      01
+    </span>
 
-            <div className="section-heading">
+    <div>
+      <p className="kicker">
+        About me
+      </p>
 
-              <span className="section-number">
-                01
-              </span>
+      <h2>
+        Focused on software
+        <br />
+        engineering.
+      </h2>
+    </div>
+  </div>
 
-              <div>
+  <div className="about-grid">
 
-                <p className="kicker">
-                  About me
-                </p>
+    <div className="about-copy">
 
-                <h2>
-                  Focused on software
-                  <br />
-                  engineering.
-                </h2>
+      <p>
+        I'm a Computer Science and Engineering
+        undergraduate at BVRIT Hyderabad College
+        of Engineering for Women with a strong
+        academic record and a focus on software
+        engineering.
+      </p>
 
-              </div>
+      <p>
+        I build practical software by taking ideas
+        from problem statements to working products —
+        developing responsive interfaces, REST APIs,
+        backend services, database-backed applications,
+        and AI-powered features.
+      </p>
 
-            </div>
+      <p>
+        I also strengthen my problem-solving skills
+        through competitive programming and
+        participate in national-level hackathons,
+        applying software engineering concepts in
+        time-constrained, team-based environments.
+      </p>
 
-            <div className="about-grid">
+    </div>
 
-              <div className="about-copy">
+    <div className="about-cards">
 
-                <p>
-                  I'm a Computer Science and Engineering
-                  undergraduate at BVRIT Hyderabad College
-                  of Engineering for Women with a strong
-                  academic record and a growing focus on
-                  software engineering.
-                </p>
+      <div className="mini-card">
+        <Code2 />
 
-                <p>
-                  I enjoy taking ideas from problem statements
-                  to working products — building interfaces,
-                  designing REST APIs, developing backend
-                  services, working with databases, and
-                  integrating AI where it creates meaningful
-                  value.
-                </p>
+        <div>
+          <strong>Software</strong>
+          <span>
+            Full-stack web applications
+          </span>
+        </div>
+      </div>
 
-                <p>
-                  Alongside development, I actively practice
-                  data structures and problem solving through
-                  competitive programming and participate in
-                  national-level hackathons.
-                </p>
+      <div className="mini-card">
+        <Database />
 
-              </div>
+        <div>
+          <strong>Backend</strong>
+          <span>
+            REST APIs & data persistence
+          </span>
+        </div>
+      </div>
 
-              <div className="about-cards">
+      <div className="mini-card">
+        <Globe2 />
 
-                <div className="mini-card">
-                  <Code2 />
+        <div>
+          <strong>AI</strong>
+          <span>
+            LLM-powered applications
+          </span>
+        </div>
+      </div>
 
-                  <div>
-                    <strong>Software</strong>
-                    <span>
-                      Full-stack web applications
-                    </span>
-                  </div>
-                </div>
+      <div className="mini-card">
+        <Terminal />
 
-                <div className="mini-card">
-                  <Database />
+        <div>
+          <strong>Problem solving</strong>
+          <span>
+            Competitive programming
+          </span>
+        </div>
+      </div>
 
-                  <div>
-                    <strong>Backend</strong>
-                    <span>
-                      REST APIs & data persistence
-                    </span>
-                  </div>
-                </div>
+    </div>
 
-                <div className="mini-card">
-                  <Globe2 />
-
-                  <div>
-                    <strong>AI</strong>
-                    <span>
-                      LLM-powered applications
-                    </span>
-                  </div>
-                </div>
-
-                <div className="mini-card">
-                  <Terminal />
-
-                  <div>
-                    <strong>Problem solving</strong>
-                    <span>
-                      Competitive programming
-                    </span>
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-
-          </section>
+  </div>
+</section>
 
           {/* =================================================
               PROJECTS
@@ -665,246 +659,237 @@ function App() {
           ================================================= */}
 
           <section
-            id="achievements"
-            className="section section-alt"
-          >
+  id="achievements"
+  className="section section-alt"
+>
+  <div className="container">
 
-            <div className="container">
+    <div className="section-heading">
 
-              <div className="section-heading">
+      <span className="section-number">
+        04
+      </span>
 
-                <span className="section-number">
-                  04
-                </span>
+      <div>
 
-                <div>
+        <p className="kicker">
+          Beyond projects
+        </p>
 
-                  <p className="kicker">
-                    Beyond projects
-                  </p>
+        <h2>
+          Proof of consistency.
+        </h2>
 
-                  <h2>
-                    Proof of consistency.
-                  </h2>
+      </div>
 
-                </div>
+    </div>
 
-              </div>
+    <div className="achievement-grid">
 
-              <div className="achievement-grid">
+      {/* COMPETITIVE PROGRAMMING */}
 
-                {/* COMPETITIVE PROGRAMMING */}
+      <div className="achievement-card featured">
 
-                <div className="achievement-card featured">
+        <Trophy size={25} />
 
-                  <Trophy size={25} />
+        <strong>
+          Competitive programming
+        </strong>
 
-                  <strong>
-                    Competitive programming
-                  </strong>
+        <div className="achievement-stats">
 
-                  <div className="achievement-stats">
+          {codingProfiles.map((profile) => (
 
-                    {codingProfiles.map((profile) => (
+            <a
+              key={profile.name}
+              href={profile.url}
+              target="_blank"
+              rel="noreferrer"
+              className="achievement-profile"
+              aria-label={`${profile.name} profile`}
+            >
 
-                      <a
-                        key={profile.name}
-                        href={profile.url}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="achievement-profile"
-                        aria-label={`${profile.name} profile`}
-                      >
+              <span>
+                <b>
+                  {profile.rating}
+                </b>
 
-                        <span>
+                {profile.name}
+              </span>
 
-                          <b>
-                            {profile.rating}
-                          </b>
+            </a>
 
-                          {profile.name}
+          ))}
 
-                        </span>
+        </div>
 
-                      </a>
+        <p>
+          1,300+ CodeChef · 300+ LeetCode ·
+          150+ Codeforces problems
+        </p>
 
-                    ))}
+      </div>
 
-                  </div>
+      {/* HACKATHONS */}
 
-                  <p>
-                    1,300+ CodeChef · 300+ LeetCode ·
-                    150+ Codeforces problems
-                  </p>
+      <div className="achievement-card">
 
-                </div>
+        <BriefcaseBusiness size={25} />
 
-                {/* HACKATHONS */}
+        <strong>
+          Hackathons
+        </strong>
 
-                <div className="achievement-card">
+        <p>
+          Participated in 7+ national-level hackathons,
+          building and presenting software prototypes
+          in time-constrained, team-based environments.
+        </p>
 
-                  <BriefcaseBusiness size={25} />
+      </div>
 
-                  <strong>
-                    Hackathons
-                  </strong>
+      {/* SERVICENOW */}
 
-                  <p>
-                    Participated in 7+ national-level
-                    hackathons, developing and presenting
-                    software prototypes in time-constrained,
-                    team-based environments.
-                  </p>
+      <div className="achievement-card">
 
-                </div>
+        <GraduationCap size={25} />
 
-                {/* SERVICENOW */}
+        <strong>
+          ServiceNow Virtual Internship
+        </strong>
 
-                <div className="achievement-card">
+        <p>
+          Completed a virtual internship with hands-on
+          exposure to ServiceNow platform administration
+          and foundational ITSM concepts.
+        </p>
 
-                  <GraduationCap size={25} />
+      </div>
 
-                  <strong>
-                    ServiceNow Virtual Internship
-                  </strong>
+    </div>
 
-                  <p>
-                    Gained hands-on exposure to ServiceNow,
-                    platform administration, and basic
-                    ITSM concepts.
-                  </p>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </section>
+  </div>
+</section>
 
           {/* =================================================
               EDUCATION
           ================================================= */}
 
           <section
-            id="education"
-            className="education section container"
-          >
+  id="education"
+  className="education section container"
+>
+  <div className="education-line">
 
-            <div className="education-line">
+    <span className="section-number">
+      05
+    </span>
 
-              <span className="section-number">
-                05
-              </span>
+    <div>
 
-              <div>
+      <p className="kicker">
+        Education
+      </p>
 
-                <p className="kicker">
-                  Education
-                </p>
+      <h2>
+        BVRIT Hyderabad College
+        <br />
+        of Engineering for Women
+      </h2>
 
-                <h2>
-                  BVRIT Hyderabad College
-                  <br />
-                  of Engineering for Women
-                </h2>
+      <p>
+        B.Tech in Computer Science and Engineering
+        · Aug 2024 — Present
+      </p>
 
-                <p>
-                  B.Tech in Computer Science and Engineering
-                  · Aug 2024 — Present
-                </p>
+    </div>
 
-              </div>
+    <div className="cgpa">
 
-              <div className="cgpa">
+      <strong>
+        9.38
+      </strong>
 
-                <strong>
-                  9.38
-                </strong>
+      <span>
+        CGPA
+      </span>
 
-                <span>
-                  CGPA
-                </span>
+    </div>
 
-              </div>
-
-            </div>
-
-          </section>
+  </div>
+</section>
 
           {/* =================================================
               CONTACT
           ================================================= */}
 
           <section
-            id="contact"
-            className="contact section"
-          >
+  id="contact"
+  className="contact section"
+>
+  <div className="container contact-inner">
 
-            <div className="container contact-inner">
+    <p className="kicker">
+      06 · Contact
+    </p>
 
-              <p className="kicker">
-                06 · Contact
-              </p>
+    <h2>
+      Open to
+      <br />
+      <span>opportunities.</span>
+    </h2>
 
-              <h2>
-                Open to
-                <br />
-                <span>opportunities.</span>
-              </h2>
+    <p>
+      I'm currently seeking SWE internship opportunities
+      where I can contribute to real-world software,
+      strengthen my engineering skills, and build reliable
+      products.
+    </p>
 
-              <p>
-                I'm currently looking for SWE internship
-                opportunities where I can learn, contribute,
-                and build reliable software with strong
-                engineering fundamentals.
-              </p>
+    <div className="contact-links">
 
-              <div className="contact-links">
+      <a
+        href="mailto:navyathottempudi0048@gmail.com"
+      >
+        <Mail size={17} />
+        navyathottempudi0048@gmail.com
+      </a>
 
-                <a
-                  href="mailto:navyathottempudi0048@gmail.com"
-                >
-                  <Mail size={17} />
-                  navyathottempudi0048@gmail.com
-                </a>
+      <a
+        href="https://github.com/navya-thottempudi"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Github size={17} />
+        github.com/navya-thottempudi
+      </a>
 
-                <a
-                  href="https://github.com/navya-thottempudi"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Github size={17} />
-                  github.com/navya-thottempudi
-                </a>
+      <a
+        href="https://www.linkedin.com/in/navyathottempudi"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Linkedin size={17} />
+        linkedin.com/in/navyathottempudi
+      </a>
 
-                <a
-                  href="https://www.linkedin.com/in/navyathottempudi"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Linkedin size={17} />
-                  linkedin.com/in/navyathottempudi
-                </a>
+      <a
+        href="/resume.pdf"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <FileText size={17} />
+        Resume
+      </a>
 
-                <a
-                  href="/resume.pdf"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FileText size={17} />
-                  Resume
-                </a>
+    </div>
 
-              </div>
+  </div>
+</section>
 
-            </div>
+</div>
 
-          </section>
-
-        </div>
-
-      </main>
+</main>
 
       {/* =====================================================
           FOOTER
