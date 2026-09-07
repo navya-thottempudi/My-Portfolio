@@ -1311,3 +1311,16 @@ h2 {
     gap: 8px;
   }
 }
+
+.achievement-profile {
+  color: inherit;
+  text-decoration: none;
+}
+
+.achievement-profile:hover b {
+  color: var(--accent);
+}
+
+.achievement-profile:hover {
+  cursor: pointer;
+}

@@ -16,9 +16,14 @@ import {
   GraduationCap,
   BriefcaseBusiness,
   ChevronDown,
+  FileText,
 } from "lucide-react";
 
 import "./styles.css";
+
+/* =========================================================
+   PROJECT DATA
+========================================================= */
 
 const projects = [
   {
@@ -28,8 +33,8 @@ const projects = [
       "A multilingual language and currency platform combining translation, speech, currency conversion, and weekly exchange-rate analysis.",
     highlights: [
       "Supported 103 languages and 31 currencies.",
-      "Integrated Frankfurter API for currency conversion and 7-day historical exchange-rate analysis.",
-      "Built 4 Flask REST endpoints with validation, failure handling, structured JSON, and appropriate HTTP status codes.",
+      "Integrated the Frankfurter API for currency conversion and 7-day historical exchange-rate analysis.",
+      "Built 4 Flask REST endpoints with request validation, failure handling, structured JSON responses, and appropriate HTTP status codes.",
     ],
     stack: ["React", "Flask", "REST APIs"],
     github: "https://github.com/navya-thottempudi/Linguapay",
@@ -40,13 +45,19 @@ const projects = [
     title: "AI Assistant Web Application",
     period: "Apr 2026",
     description:
-      "A full-stack conversational AI application with persistent chat history and an LLM-backed backend service.",
+      "A full-stack conversational AI application using an LLM-backed backend service with persistent chat history.",
     highlights: [
-      "Integrated Groq's Llama 3.1 8B model for interactive question answering.",
-      "Stored user and AI exchanges in MongoDB Atlas and retrieved the 20 most recent exchanges through REST.",
-      "Separated request validation and LLM integration into a backend service layer with environment-managed credentials.",
+      "Engineered a React and Node.js/Express application integrating Groq's Llama 3.1 8B model for interactive question answering.",
+      "Implemented MongoDB Atlas-backed chat persistence, storing user and AI exchanges and retrieving the 20 most recent exchanges through REST.",
+      "Added request validation, exception handling, and environment-based management of API and database credentials.",
     ],
-    stack: ["React", "Node.js", "Express", "MongoDB", "REST APIs"],
+    stack: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "REST APIs",
+    ],
     github: "https://github.com/navya-thottempudi/AI-ASSISTANT",
     live: null,
   },
@@ -57,9 +68,9 @@ const projects = [
     description:
       "An AI-powered learning roadmap generator that creates personalized plans from career goals, skill level, study hours, and resource preferences.",
     highlights: [
-      "Used Gemini 2.5 Flash to generate personalized learning plans.",
-      "Engineered structured JSON outputs containing phases, durations, skills, projects, resources, and career outcomes.",
-      "Added localStorage persistence for generated roadmaps and roadmap history.",
+      "Built personalized learning plans using Google's Gemini 2.5 Flash model.",
+      "Engineered structured JSON outputs containing learning phases, durations, skills, projects, resources, and career outcomes.",
+      "Added localStorage-based persistence to preserve the latest roadmap and maintain generated roadmap history.",
     ],
     stack: [
       "HTML",
@@ -75,18 +86,34 @@ const projects = [
   },
 ];
 
-const skills = {
-  Languages: ["Java", "C++", "Python", "JavaScript", "HTML", "CSS"],
+/* =========================================================
+   SKILLS
+========================================================= */
 
-  "Web & Backend": [
+const skills = {
+  Languages: [
+    "Java",
+    "C++",
+    "Python",
+    "JavaScript",
+    "HTML",
+    "CSS",
+  ],
+
+  Frameworks: [
     "React",
     "Node.js",
     "Express.js",
+    "Flask",
+  ],
+
+  "Databases & APIs": [
+    "MongoDB",
     "REST APIs",
   ],
 
-  "Data & Tools": [
-    "MongoDB",
+  Tools: [
+    "Git",
     "GitHub",
     "Linux",
     "Tableau",
@@ -99,6 +126,38 @@ const skills = {
   ],
 };
 
+/* =========================================================
+   CODING PROFILES
+   ========================================================= */
+
+const codingProfiles = [
+  {
+    name: "CodeChef",
+    rating: "1500+",
+    problems: "1300+ problems",
+    username: "navya_t",
+    url: "https://www.codechef.com/users/navya_t",
+  },
+  {
+    name: "LeetCode",
+    rating: "1600+",
+    problems: "300+ problems",
+    username: "Navya Thottempudi",
+    url: "https://leetcode.com/u/NavyaThottempudi/",
+  },
+  {
+    name: "Codeforces",
+    rating: "1000+",
+    problems: "150+ problems",
+    username: "navyathottempudi",
+    url: "https://codeforces.com/profile/navyathottempudi",
+  },
+];
+
+/* =========================================================
+   APP
+========================================================= */
+
 function App() {
   const [menu, setMenu] = useState(false);
 
@@ -109,7 +168,9 @@ function App() {
   return (
     <div className="app">
 
-      {/* ================= NAVBAR ================= */}
+      {/* =====================================================
+          NAVBAR
+      ===================================================== */}
 
       <header className="nav-wrap">
         <nav className="nav container">
@@ -158,11 +219,15 @@ function App() {
         </nav>
       </header>
 
-      {/* ================= MAIN ================= */}
+      {/* =====================================================
+          MAIN
+      ===================================================== */}
 
       <main id="top">
 
-        {/* ================= HERO / INTRO ================= */}
+        {/* ===================================================
+            HERO / INTRO
+        =================================================== */}
 
         <section className="hero container">
 
@@ -181,8 +246,8 @@ function App() {
 
             <p className="hero-text">
               I'm <strong>Navya Thottempudi</strong>, a Computer
-              Science undergraduate focused on software
-              development, full-stack applications, and
+              Science undergraduate focused on software engineering,
+              full-stack applications, backend development, and
               AI-powered products.
             </p>
 
@@ -198,10 +263,12 @@ function App() {
 
               <a
                 className="btn secondary"
-                href="mailto:navyathottempudi0048@gmail.com"
+                href="/resume.pdf"
+                target="_blank"
+                rel="noreferrer"
               >
-                Get in touch
-                <Mail size={17} />
+                Resume
+                <FileText size={17} />
               </a>
 
             </div>
@@ -259,8 +326,8 @@ function App() {
               </div>
 
               <div>
-                <strong>3</strong>
-                <span>Core projects</span>
+                <strong>1,500+</strong>
+                <span>DSA rating</span>
               </div>
 
               <div>
@@ -270,7 +337,7 @@ function App() {
 
               <div>
                 <strong>3</strong>
-                <span>Coding platforms</span>
+                <span>Core projects</span>
               </div>
 
             </div>
@@ -284,11 +351,15 @@ function App() {
           Scroll to explore
         </div>
 
-        {/* ================= PAGE CONTENT ================= */}
+        {/* ===================================================
+            PAGE CONTENT
+        =================================================== */}
 
         <div className="page-content">
 
-          {/* ================= ABOUT ================= */}
+          {/* =================================================
+              ABOUT
+          ================================================= */}
 
           <section
             id="about"
@@ -302,15 +373,17 @@ function App() {
               </span>
 
               <div>
+
                 <p className="kicker">
-                  A little about me
+                  About me
                 </p>
 
                 <h2>
-                  Curious by nature.
+                  Focused on software
                   <br />
-                  Builder by practice.
+                  engineering.
                 </h2>
+
               </div>
 
             </div>
@@ -324,22 +397,23 @@ function App() {
                   undergraduate at BVRIT Hyderabad College
                   of Engineering for Women with a strong
                   academic record and a growing focus on
-                  building reliable software.
+                  software engineering.
                 </p>
 
                 <p>
-                  I enjoy taking an idea from a problem
-                  statement to a working product — designing
-                  interfaces, connecting APIs, building
-                  backend services, working with databases,
-                  and integrating AI where it creates real value.
+                  I enjoy taking ideas from problem statements
+                  to working products — building interfaces,
+                  designing REST APIs, developing backend
+                  services, working with databases, and
+                  integrating AI where it creates meaningful
+                  value.
                 </p>
 
                 <p>
-                  Alongside projects, I actively practice
-                  problem solving across competitive programming
-                  platforms and participate in hackathons to
-                  build under time constraints.
+                  Alongside development, I actively practice
+                  data structures and problem solving through
+                  competitive programming and participate in
+                  national-level hackathons.
                 </p>
 
               </div>
@@ -396,7 +470,9 @@ function App() {
 
           </section>
 
-          {/* ================= PROJECTS ================= */}
+          {/* =================================================
+              PROJECTS
+          ================================================= */}
 
           <section
             id="projects"
@@ -412,6 +488,7 @@ function App() {
                 </span>
 
                 <div>
+
                   <p className="kicker">
                     Selected work
                   </p>
@@ -421,6 +498,7 @@ function App() {
                     <br />
                     how I build.
                   </h2>
+
                 </div>
 
               </div>
@@ -485,6 +563,7 @@ function App() {
                       </p>
 
                       <ul>
+
                         {project.highlights.map(
                           (highlight) => (
                             <li key={highlight}>
@@ -492,6 +571,7 @@ function App() {
                             </li>
                           )
                         )}
+
                       </ul>
 
                       <div className="tags">
@@ -516,7 +596,9 @@ function App() {
 
           </section>
 
-          {/* ================= SKILLS ================= */}
+          {/* =================================================
+              SKILLS
+          ================================================= */}
 
           <section
             id="skills"
@@ -578,7 +660,9 @@ function App() {
 
           </section>
 
-          {/* ================= ACHIEVEMENTS ================= */}
+          {/* =================================================
+              ACHIEVEMENTS
+          ================================================= */}
 
           <section
             id="achievements"
@@ -609,6 +693,8 @@ function App() {
 
               <div className="achievement-grid">
 
+                {/* COMPETITIVE PROGRAMMING */}
+
                 <div className="achievement-card featured">
 
                   <Trophy size={25} />
@@ -619,20 +705,30 @@ function App() {
 
                   <div className="achievement-stats">
 
-                    <span>
-                      <b>1500+</b>
-                      CodeChef
-                    </span>
+                    {codingProfiles.map((profile) => (
 
-                    <span>
-                      <b>1600+</b>
-                      LeetCode
-                    </span>
+                      <a
+                        key={profile.name}
+                        href={profile.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="achievement-profile"
+                        aria-label={`${profile.name} profile`}
+                      >
 
-                    <span>
-                      <b>1000+</b>
-                      Codeforces
-                    </span>
+                        <span>
+
+                          <b>
+                            {profile.rating}
+                          </b>
+
+                          {profile.name}
+
+                        </span>
+
+                      </a>
+
+                    ))}
 
                   </div>
 
@@ -642,6 +738,8 @@ function App() {
                   </p>
 
                 </div>
+
+                {/* HACKATHONS */}
 
                 <div className="achievement-card">
 
@@ -653,12 +751,14 @@ function App() {
 
                   <p>
                     Participated in 7+ national-level
-                    hackathons, building and presenting
+                    hackathons, developing and presenting
                     software prototypes in time-constrained,
                     team-based environments.
                   </p>
 
                 </div>
+
+                {/* SERVICENOW */}
 
                 <div className="achievement-card">
 
@@ -669,7 +769,7 @@ function App() {
                   </strong>
 
                   <p>
-                    Hands-on exposure to ServiceNow,
+                    Gained hands-on exposure to ServiceNow,
                     platform administration, and basic
                     ITSM concepts.
                   </p>
@@ -682,9 +782,14 @@ function App() {
 
           </section>
 
-          {/* ================= EDUCATION ================= */}
+          {/* =================================================
+              EDUCATION
+          ================================================= */}
 
-          <section className="education section container">
+          <section
+            id="education"
+            className="education section container"
+          >
 
             <div className="education-line">
 
@@ -727,7 +832,9 @@ function App() {
 
           </section>
 
-          {/* ================= CONTACT ================= */}
+          {/* =================================================
+              CONTACT
+          ================================================= */}
 
           <section
             id="contact"
@@ -741,15 +848,16 @@ function App() {
               </p>
 
               <h2>
-                Let's build something
+                Open to
                 <br />
-                <span>worth talking about.</span>
+                <span>opportunities.</span>
               </h2>
 
               <p>
                 I'm currently looking for SWE internship
                 opportunities where I can learn, contribute,
-                and build software that matters.
+                and build reliable software with strong
+                engineering fundamentals.
               </p>
 
               <div className="contact-links">
@@ -779,6 +887,15 @@ function App() {
                   linkedin.com/in/navyathottempudi
                 </a>
 
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FileText size={17} />
+                  Resume
+                </a>
+
               </div>
 
             </div>
@@ -789,7 +906,9 @@ function App() {
 
       </main>
 
-      {/* ================= FOOTER ================= */}
+      {/* =====================================================
+          FOOTER
+      ===================================================== */}
 
       <footer className="footer">
 
@@ -810,6 +929,10 @@ function App() {
     </div>
   );
 }
+
+/* =========================================================
+   RENDER
+========================================================= */
 
 createRoot(
   document.getElementById("root")
